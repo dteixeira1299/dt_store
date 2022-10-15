@@ -1,0 +1,7 @@
+{
+  "name": "aula_pwfe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
