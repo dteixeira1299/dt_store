@@ -7,7 +7,7 @@ import './Header.css';
   const Header: React.FC = () => (
 
         
-    <IonHeader>
+    <IonHeader className='ion-header'>
     <IonToolbar>
       <IonGrid>
         <IonRow>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonToolbar, IonButton } from '@ionic/react';
+import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle} from '@ionic/react';
 import './CardProduct.css';
 
 interface ContainerProps {
@@ -27,9 +27,6 @@ interface ContainerProps {
       <IonCardContent>
         {details}
       </IonCardContent>
-      <IonToolbar>
-        <IonButton  onClick={() => viewProduct({id})} expand="full">View</IonButton>
-      </IonToolbar>
     </IonCard>
 
     

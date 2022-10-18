@@ -13,9 +13,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { cube, list, home, cart, people } from 'ionicons/icons';
 import Home from './pages/Home';
 import Products from './pages/Products';
-import Category from './pages/Category';
 import Order from './pages/Order';
-import Users from './pages/Users';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -49,14 +47,8 @@ const App: React.FC = () => (
           <Route exact path="/products">
             <Products />
           </Route>
-          <Route exact path="/category">
-            <Category />
-          </Route>
           <Route exact path="/order">
             <Order />
-          </Route>
-          <Route exact path="/users">
-            <Users />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
@@ -71,17 +63,9 @@ const App: React.FC = () => (
             <IonIcon icon={cube} />
             <IonLabel>Products</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="category" href="/category">
-            <IonIcon icon={list} />
-            <IonLabel>Category</IonLabel>
-          </IonTabButton>
           <IonTabButton tab="order" href="/order">
             <IonIcon icon={cart} />
             <IonLabel>Order</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="users" href="/users">
-            <IonIcon icon={people} />
-            <IonLabel>Users</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

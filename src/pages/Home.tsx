@@ -3,13 +3,14 @@ import Card from '../components/Card';
 import Header from '../components/Header';
 import './Home.css';
 import { cube, list, cart, people } from 'ionicons/icons';
+import ChartSales from '../components/ChartSales';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <Header />
       <IonContent fullscreen>
-        <IonHeader className='ion-no-border header'>
+        <IonHeader className='ion-no-border'>
           <IonTitle size="large">
             Welcome, <strong>Diogo Teixeira</strong>!
             <hr
@@ -39,6 +40,8 @@ const Home: React.FC = () => {
             </IonCol>
           </IonRow>
         </IonGrid>
+
+        <ChartSales/>
 
 
 

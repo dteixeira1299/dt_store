@@ -15,12 +15,12 @@ const Products: React.FC = () => {
     <IonPage>
       <Header />
       <IonContent fullscreen>
-        <IonHeader className='ion-header'>
+        <IonHeader>
           <IonTitle size="large">Products List</IonTitle>
         </IonHeader>
         <ProductsList />
 
-        <IonText color="dark">
+        <IonText color="dark" className='ion-text'>
           <h5>Most popular products</h5>
         </IonText>
 
