@@ -6,3 +6,8 @@
 .ion-col {
     border: 1px solid white;
 }
+
+.order-details {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}

@@ -14,6 +14,7 @@ import { cube, list, home, cart, people } from 'ionicons/icons';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Order from './pages/Order';
+import OrderDetails from './pages/OrderDetails';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -49,6 +50,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/order">
             <Order />
+          </Route>
+          <Route exact path="/order/:id">
+            <OrderDetails />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />

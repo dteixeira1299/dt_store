@@ -2,8 +2,14 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRow, IonCol, I
 import './Order.css';
 import Header from '../components/Header';
 import List from '../components/List';
+import Card from '../components/Card';
+import { cube } from 'ionicons/icons';
+import { useLocation } from "react-router-dom";
+
 
 const Order: React.FC = () => {
+  const search = useLocation().search;
+  const name = new URLSearchParams(search).get('order_id');
   return (
     <IonPage>
       <Header />
@@ -20,34 +26,35 @@ const Order: React.FC = () => {
           <IonRow>
             <IonCol size="12" size-md="4" className='ion-col'>
               <IonTitle>Last orders PENDING</IonTitle>
-              <List title="ENC #1978 - José Silva" />
-              <List title="ENC #1977 - António Costa" />
-              <List title="ENC #1976 - Artur Rocha" />
-              <List title="ENC #1975 - Mário Soares" />
+              <List ord={1978} name="José Silva" />
+              <List ord={1977} name="António Costa" />
+              <List ord={1976} name="Artur Rocha" />
+              <List ord={1975} name="Mário Soares" />
             </IonCol>
             <IonCol size="12" size-md="4" className='ion-col'>
               <IonTitle>Last orders AWAITING PAYMENT</IonTitle>
-              <List title="ENC #1680 - André Ribeiro" />
-              <List title="ENC #1679 - Mário Vaz" />
-              <List title="ENC #1678 - Joana Santos" />
-              <List title="ENC #1677 - Diana Chaves" />
+              <List ord={1680} name="André Ribeiro" />
+              <List ord={1679} name="Mário Vaz" />
+              <List ord={1678} name="Joana Santos" />
+              <List ord={1677} name="Diana Chaves" />
             </IonCol>
             <IonCol size="12" size-md="4" className='ion-col'>
               <IonTitle>Last orders SENT</IonTitle>
-              <List title="ENC #1599 - Carlos Gomes" />
-              <List title="ENC #1598 - Olga Duarte" />
-              <List title="ENC #1597 - Bruno Carvalho" />
-              <List title="ENC #1596 - João Duarte" />
+              <List ord={1599} name="Carlos Gomes" />
+              <List ord={1598} name="Olga Duarte" />
+              <List ord={1597} name="Bruno Carvalho" />
+              <List ord={1596} name="João Duarte" />
             </IonCol>
             <IonCol size="12" size-md="4" className='ion-col'>
               <IonTitle>Last orders AWAITING FEEDBACK</IonTitle>
-              <List title="ENC #1444 - Daniel Oliveira" />
-              <List title="ENC #1443 - Filipa Lúcio" />
-              <List title="ENC #1442 - Serafim Saudade" />
-              <List title="ENC #1441 - Paulo Ferreira Coixão" />
+              <List ord={1444} name="Daniel Oliveira" />
+              <List ord={1443} name="Filipa Lúcio" />
+              <List ord={1442} name="Serafim Saudade" />
+              <List ord={1441} name="Paulo Ferreira Coixão" />
             </IonCol>
           </IonRow>
         </IonGrid>
+
 
 
       </IonContent>
