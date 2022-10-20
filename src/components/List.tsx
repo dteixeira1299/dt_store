@@ -14,7 +14,7 @@ interface ContainerProps {
         
       <IonList>
       <IonItem>
-        <IonLabel>ENC #<Link to={"/order/"+ord}>{ord}</Link> - {name}</IonLabel>
+        <IonLabel>Ord #<Link to={"/order/"+ord}>{ord}</Link> - {name}</IonLabel>
       </IonItem>
     </IonList>
     
