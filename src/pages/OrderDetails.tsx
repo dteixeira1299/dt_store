@@ -1,6 +1,8 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRow, IonCol, IonGrid, IonItem, IonLabel, IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRow, IonCol, IonGrid, IonItem, IonLabel, IonButton, IonIcon, IonList, IonSelect, IonSelectOption } from '@ionic/react';
 import Header from '../components/Header';
 import './OrderDetails.css';
+import { print } from 'ionicons/icons';
+
 
 
 const Order: React.FC = () => {
@@ -14,16 +16,27 @@ const Order: React.FC = () => {
           </IonToolbar>
         </IonHeader>
 
-      
+
 
         <IonGrid className='ion-grid'>
           <IonRow>
             <IonCol size="12" size-md="6">
-            <IonTitle className='ion-title'>Order #1978 - José Silva</IonTitle>
+              <IonTitle className='ion-title'>Order #1978 - José Silva</IonTitle>
             </IonCol>
             <IonCol size="12" size-md="6" style={{ alignSelf: 'flex-start', textAlign: 'right' }}>
-            <IonButton color="dark">Invoice</IonButton>
-            <IonButton color="warning">PENDING</IonButton>
+              <IonButton color="dark"><IonIcon icon={print}></IonIcon></IonButton>
+              <IonButton color="success">
+                <IonList>
+                  <IonItem color="transparent">
+                    <IonSelect value={"paid"}>
+                      <IonSelectOption value="pending">Pending</IonSelectOption>
+                      <IonSelectOption value="paid">Paid</IonSelectOption>
+                      <IonSelectOption value="inprocess">In Process</IonSelectOption>
+                      <IonSelectOption value="sent">Sent</IonSelectOption>
+                    </IonSelect>
+                  </IonItem>
+                </IonList>
+              </IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>
@@ -31,7 +44,7 @@ const Order: React.FC = () => {
 
 
         <IonGrid className='ion-grid'>
-        <IonTitle>Client Data:</IonTitle>
+          <IonTitle>Client Data:</IonTitle>
           <IonRow>
             <IonCol size="12" size-md="6">
               <IonItem>
@@ -45,7 +58,7 @@ const Order: React.FC = () => {
               </IonItem>
             </IonCol>
             <IonCol size="12" size-md="6">
-            <IonItem>
+              <IonItem>
                 <IonLabel><strong>Email:</strong> jose.silva@gmail.com</IonLabel>
               </IonItem>
               <IonItem>
@@ -67,8 +80,8 @@ const Order: React.FC = () => {
           }}
         />
 
-<IonGrid className='ion-grid'>
-        <IonTitle>Payment Data:</IonTitle>
+        <IonGrid className='ion-grid'>
+          <IonTitle>Payment Data:</IonTitle>
           <IonRow>
             <IonCol size="12" size-md="6">
               <IonItem>
@@ -79,8 +92,34 @@ const Order: React.FC = () => {
               </IonItem>
             </IonCol>
             <IonCol size="12" size-md="6">
-            <IonItem>
+              <IonItem>
                 <IonLabel><strong>Payment Transaction ID:</strong> 4928980340280828492</IonLabel>
+              </IonItem>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+
+        <hr
+          style={{
+            background: 'white',
+            color: 'white',
+            borderColor: 'white',
+            height: '1px',
+            marginTop: '20px',
+            marginBottom: '20px',
+          }}
+        />
+
+        <IonGrid className='ion-grid'>
+          <IonTitle>Order Items:</IonTitle>
+          <IonRow>
+            <IonCol size="12" size-md="12">
+              <IonItem>
+                <IonLabel><p>1 X Product A - 100$</p><p>2 X Product C - 150$</p></IonLabel>
+              </IonItem>
+              <IonItem>
+                <IonLabel><strong>TOTAL:</strong></IonLabel>
+                <IonLabel style={{ alignSelf: 'flex-start', textAlign: 'right' }}>400$</IonLabel>
               </IonItem>
             </IonCol>
           </IonRow>
